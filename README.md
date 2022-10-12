@@ -1,3 +1,7 @@
+# Currency Converter
+
+![Снимок экрана от 2022-10-13 00-34-37](https://user-images.githubusercontent.com/114909146/195452235-28a77d33-14c3-4dc3-bb67-edd699869aed.png)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) TS template.
