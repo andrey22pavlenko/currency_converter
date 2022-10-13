@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { CurrencyType } from '../types/CurrencyType'
+import { CurrencyType } from '../type/CurrencyType'
 
 const URL_CURRENCY = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'
 

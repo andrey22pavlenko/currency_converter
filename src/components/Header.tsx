@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { CurrencyType } from '../types/CurrencyType'
+import { CurrencyType } from '../type/CurrencyType'
 
 interface HeaderProps {
   currency?: CurrencyType[]

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { CurrencyType } from '../types/CurrencyType'
+import { CurrencyType } from '../type/CurrencyType'
 
 const NUM = 22.8
 
