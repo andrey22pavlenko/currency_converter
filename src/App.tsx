@@ -23,13 +23,21 @@ export default function App() {
 
       <div className='flex flex-row space-x-28 '>
         <div className='flex flex-col  w-80 space-y-5'>
-          <Input value={inputFirst} onChange={dispatch(inputFirstChange)} />
-          <Select currency={data} loading={isLoading} onChange={dispatch(selectFirstChange)} />
+          <Input value={inputFirst} onChange={(value) => dispatch(inputFirstChange(value))} />
+          <Select
+            currency={data}
+            loading={isLoading}
+            onChange={(value) => dispatch(selectFirstChange(value))}
+          />
         </div>
 
         <div className='flex flex-col  w-80 space-y-5'>
-          <Input value={inputSecond} onChange={dispatch(inputSecondChange)} />
-          <Select currency={data} loading={isLoading} onChange={dispatch(selectSecondChange)} />
+          <Input value={inputSecond} onChange={(value) => dispatch(inputSecondChange(value))} />
+          <Select
+            currency={data}
+            loading={isLoading}
+            onChange={(value) => dispatch(selectSecondChange(value))}
+          />
         </div>
       </div>
     </div>
