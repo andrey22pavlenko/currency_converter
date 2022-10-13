@@ -1,14 +1,19 @@
 import React, { FC } from 'react'
-import { useGetCurrencyQuery } from '../../reducers/apiReducer'
+import { CurrencyType } from '../types/CurrencyType'
 
-const Header: FC = () => {
-  const { data: currency, isLoading } = useGetCurrencyQuery('')
+interface HeaderProps {
+  currency?: CurrencyType[],
+  loading: boolean
+}
+
+const Header: FC<HeaderProps> = ({currency, loading}) => {
+ 
 
   return (
     <div className='flex flex-col space-x-72'>
       <h1 className='text-4xl'>Currency Converter</h1>
 
-      {isLoading ? (
+      {loading ? (
         <p className='pl-96 '>Loading</p>
       ) : (
         <div className='pl-96 text-lg'>

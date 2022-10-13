@@ -1,24 +1,39 @@
 import React from 'react'
-import Header from './components/header/Header'
-import InputFirst from './components/inputs/InputFirst'
-import InputSecond from './components/inputs/InputSecond'
-import SelectFirst from './components/selects/SelectFirst'
-import SelectSecond from './components/selects/SelectSecond'
+import Header from './components/Header'
+import Input from './components/Input'
+import { inputFirstChange, inputSecondChange, selectFirstChange, selectSecondChange} from './reducers/appReducer'
+import { useAppSelector } from './store/hooks'
+import  Select  from './components/Select'
+import { useGetCurrencyQuery } from './reducers/apiReducer'
+
 
 export default function App() {
+
+ 
+  const inputFirst = useAppSelector((state) => state.currency.inputFirst)
+  const inputSecond = useAppSelector(state => state.currency.inputSecond)
+  const { data, isLoading } = useGetCurrencyQuery('')
+  
+ 
   return (
+
     <div className='ml-96 mt-24 space-y-10  '>
-      <Header />
+
+
+      <Header currency={data} loading={isLoading} />
 
       <div className='flex flex-row space-x-28 '>
         <div className='flex flex-col  w-80 space-y-5'>
-          <InputFirst />
-          <SelectFirst />
+
+          <Input  value={inputFirst} onChange={inputFirstChange} />
+          <Select  currency={data} loading={isLoading} onChange={selectFirstChange} />
+         
         </div>
 
         <div className='flex flex-col  w-80 space-y-5'>
-          <InputSecond />
-          <SelectSecond />
+         
+          <Input  value={inputSecond} onChange={inputSecondChange} />
+          <Select  currency={data} loading={isLoading} onChange={selectSecondChange} />
         </div>
       </div>
     </div>
