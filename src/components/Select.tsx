@@ -7,7 +7,7 @@ interface SelectProps {
   onChange: (e: number) => void
 }
 
-const SelectSecond: FC<SelectProps> = ({ onChange, currency, loading }) => {
+const Select: FC<SelectProps> = ({ onChange, currency, loading }) => {
   return (
     <div>
       {loading ? (
@@ -30,4 +30,4 @@ const SelectSecond: FC<SelectProps> = ({ onChange, currency, loading }) => {
   )
 }
 
-export default SelectSecond
+export default Select
