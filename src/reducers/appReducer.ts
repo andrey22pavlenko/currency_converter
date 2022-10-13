@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { CurrencyType } from '../type/CurrencyType'
+import { currencyType } from '../type/currencyType'
 
-const NUM = 22.8;
+const NUM = 22.8
 
 interface initialStateProps {
-  currency: CurrencyType[]
+  currency: currencyType[]
   selectFirst: number
   selectSecond: number
   inputFirst: number

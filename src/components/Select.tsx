@@ -1,9 +1,9 @@
 import React, { FC } from 'react'
-import { CurrencyType } from '../type/CurrencyType'
+import { currencyType } from '../type/currencyType'
 
 interface SelectProps {
   onChange: (e: number) => void
-  currency?: CurrencyType[]
+  currency?: currencyType[]
   loading: boolean
 }
 

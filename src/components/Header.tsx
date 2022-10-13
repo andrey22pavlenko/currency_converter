@@ -1,8 +1,8 @@
 import React, { FC } from 'react'
-import { CurrencyType } from '../type/CurrencyType'
+import { currencyType } from '../type/currencyType'
 
 interface HeaderProps {
-  currency?: CurrencyType[]
+  currency?: currencyType[]
   loading: boolean
 }
 
