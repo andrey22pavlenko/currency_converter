@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { CurrencyType } from '../type/CurrencyType'
 
-const NUM = 22.8
+const NUM = 22.8;
 
 interface initialStateProps {
   currency: CurrencyType[]
