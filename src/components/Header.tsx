@@ -2,8 +2,8 @@ import React, { FC } from 'react'
 import { currencyType } from '../type/currencyType'
 
 interface HeaderProps {
-  currency?: currencyType[]
   loading: boolean
+  currency?: currencyType[]
 }
 
 const Header: FC<HeaderProps> = ({ currency, loading }) => {
