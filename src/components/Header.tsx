@@ -2,13 +2,11 @@ import React, { FC } from 'react'
 import { CurrencyType } from '../types/CurrencyType'
 
 interface HeaderProps {
-  currency?: CurrencyType[],
+  currency?: CurrencyType[]
   loading: boolean
 }
 
-const Header: FC<HeaderProps> = ({currency, loading}) => {
- 
-
+const Header: FC<HeaderProps> = ({ currency, loading }) => {
   return (
     <div className='flex flex-col space-x-72'>
       <h1 className='text-4xl'>Currency Converter</h1>

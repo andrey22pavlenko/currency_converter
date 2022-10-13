@@ -1,9 +1,7 @@
-import { createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 import { CurrencyType } from '../types/CurrencyType'
 
 const URL_CURRENCY = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'
-
-
 
 export const apiReducer = createApi({
   reducerPath: 'apiReducer',

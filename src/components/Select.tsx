@@ -1,18 +1,14 @@
 import React, { FC } from 'react'
-import { useAppDispatch } from '../store/hooks'
 import { CurrencyType } from '../types/CurrencyType'
 
-
 interface SelectProps {
-  onChange:(e:number) => any,
+  onChange: (e: number) => void
   currency?: CurrencyType[]
   loading: boolean
 }
 
-const SelectSecond: FC<SelectProps> = ({onChange, currency,loading}) => {
-
-
-  const dispatch = useAppDispatch()
+const SelectSecond: FC<SelectProps> = ({ onChange, currency, loading }) => {
+ 
 
   return (
     <div>
@@ -21,7 +17,7 @@ const SelectSecond: FC<SelectProps> = ({onChange, currency,loading}) => {
       ) : (
         <select
           className='w-80 text-lg antialiased font-normal h-10 rounded-md  bg-teal-50'
-          onChange={(e) => dispatch(onChange(+e.target.value))}
+          onChange={(e) => onChange(+e.target.value)}
         >
           {currency?.map((item, id) => (
             <option key={id} value={item.rate}>
